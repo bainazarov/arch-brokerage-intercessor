@@ -1,14 +1,12 @@
 package ru.gur.archintercessor.Interection;
 
-import org.springframework.stereotype.Component;
-import ru.gur.archintercessor.Interection.request.CreateOrderRequest;
+import org.springframework.http.ResponseEntity;
+import ru.gur.archintercessor.Interection.request.CreateProductRequest;
 
 import java.util.UUID;
 
-@Component
 public interface CrudShotRestClient {
+    UUID createProduct(CreateProductRequest request);
 
-    UUID createProduct(UUID customerId,
-                       CreateOrderRequest request,
-                       String key);
+    ResponseEntity<Void> deleteProduct(UUID id);
 }

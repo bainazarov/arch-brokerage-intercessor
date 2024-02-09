@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class RestTemplateConfiguration {
 
-    @Value("http://localhost:8081")
+    @Value("${addressservice.base.url}")
     private String addressBaseUrl;
 
     @Bean

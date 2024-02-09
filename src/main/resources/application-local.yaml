@@ -43,3 +43,7 @@ camunda:
 kafka:
   bootstrapAddress: localhost:9091
   groupId: group1
+
+addressservice:
+  base:
+    url: http://localhost:8081

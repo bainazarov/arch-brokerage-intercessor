@@ -13,10 +13,13 @@ public class SecondDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) {
         var test = delegateExecution.getVariable("TestVar");
         var gur = delegateExecution.getVariable("gur");
+        var id = delegateExecution.getVariable("productId");
         System.out.println("Hello from secondDelegate " + test + " " + gur);
 
         if (gur == "hhh") {
             throw new RuntimeException("Error");
         }
+
+        System.out.println("productId from CrudShop service " + id);
     }
 }
